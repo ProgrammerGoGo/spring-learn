@@ -15,10 +15,12 @@ public class App {
     public static void main(String[] args) {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(App.class);
         CgLibProxyService bean = applicationContext.getBean(CgLibProxyService.class);
-        System.out.println("============");
+        System.out.println("======doMethod1======");
         bean.doMethod1("hello");
-        System.out.println("============");
-        bean.doMethod2Exception("hello");
+        System.out.println("======doMethod2======");
+        bean.doMethod2("hello");
+        System.out.println("======doMethod3Exception======");
+        bean.doMethod3Exception("hello");
     }
 
 }

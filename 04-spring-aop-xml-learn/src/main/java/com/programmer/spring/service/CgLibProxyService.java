@@ -9,13 +9,17 @@ import org.springframework.stereotype.Service;
 @Service
 public class CgLibProxyService {
 
-    public String doMethod1(String param) {
+    public void doMethod1(String param) {
         System.out.println("CgLibProxyService#doMethod1 param:" + param);
+    }
+
+    public String doMethod2(String param) {
+        System.out.println("CgLibProxyService#doMethod2 param:" + param);
         return param;
     }
 
-    public String doMethod2Exception(String param) {
-        System.out.println("CgLibProxyService#doMethod2Exception param:" + param);
+    public String doMethod3Exception(String param) {
+        System.out.println("CgLibProxyService#doMethod3Exception param:" + param);
         throw new RuntimeException("异常了");
     }
 }
