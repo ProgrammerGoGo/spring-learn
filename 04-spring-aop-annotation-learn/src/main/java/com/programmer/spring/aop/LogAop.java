@@ -16,6 +16,9 @@ import org.springframework.stereotype.Component;
 public class LogAop {
 
     // 定义切点
+//    @Pointcut("@annotation(com.programmer.spring.annotation.LogAnnotation)")
+//    public void pointCut() {
+//    }
     @Pointcut("execution(* com.programmer.spring.service.*.*(..))")
     public void pointCut() {
     }

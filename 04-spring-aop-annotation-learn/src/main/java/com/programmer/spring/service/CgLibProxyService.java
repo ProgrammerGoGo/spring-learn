@@ -1,5 +1,6 @@
 package com.programmer.spring.service;
 
+import com.programmer.spring.annotation.LogAnnotation;
 import org.springframework.stereotype.Service;
 
 /**
@@ -21,5 +22,10 @@ public class CgLibProxyService {
     public String doMethod3Exception(String param) {
         System.out.println("CgLibProxyService#doMethod3Exception param:" + param);
         throw new RuntimeException("异常了");
+    }
+
+    @LogAnnotation
+    public void doMethod4WithLogAnnotation(String param) {
+        System.out.println("CgLibProxyService#doMethod4WithLogAnnotation param:" + param);
     }
 }

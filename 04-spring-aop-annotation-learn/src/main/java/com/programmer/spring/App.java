@@ -20,7 +20,14 @@ public class App {
         System.out.println("======doMethod2======");
         bean.doMethod2("hello");
         System.out.println("======doMethod3Exception======");
-        bean.doMethod3Exception("hello");
+        try {
+            bean.doMethod3Exception("hello");
+        } catch (Exception e) {
+            System.out.println("doMethod3Exception error." + e.getMessage());
+        }
+
+        System.out.println("======doMethod4WithLogAnnotation======");
+        bean.doMethod4WithLogAnnotation("hello");
     }
 
 }
