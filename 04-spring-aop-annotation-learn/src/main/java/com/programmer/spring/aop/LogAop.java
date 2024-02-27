@@ -29,7 +29,7 @@ public class LogAop {
     }
 
     @Before("pointCut()")
-    public void Before() {
+    public void before() {
         System.out.println("前置通知");
     }
 
